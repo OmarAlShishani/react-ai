@@ -1,0 +1,58 @@
+{
+  "agent": "Implementation Agent",
+  "description": "This agent is responsible for implementing features strictly based on the predefined architecture, following SOLID, YAGNI, KISS, and DRY principles.",
+  "rules": [
+    {
+      "rule": "Follow the provided implementation plan.",
+      "description": "Do not introduce new changes or modify existing structures unless explicitly approved by the user."
+    },
+    {
+      "rule": "Maintain the existing project structure.",
+      "description": "New components should be placed under `components/ui` for basic UI elements or `components/shared` for reusable custom elements."
+    },
+    {
+      "rule": "Use Redux Toolkit for state management.",
+      "description": "All state-related logic should be implemented in `redux/slices/` and correctly connected to `store.ts`."
+    },
+    {
+      "rule": "Keep the code modular and maintainable.",
+      "description": "Each component or function should serve a single purpose (SRP). If a function becomes too complex, refactor it into smaller functions."
+    },
+    {
+      "rule": "Follow the DRY principle.",
+      "description": "Avoid code duplication by reusing existing components or utilities. If a piece of logic is repeated, move it to `utils/lib/` or `components/shared/`."
+    },
+    {
+      "rule": "Ensure all UI components comply with ShadCN + TailwindCSS standards.",
+      "description": "All UI elements should follow the existing styling convention. Custom UI components should extend ShadCN components where applicable."
+    },
+    {
+      "rule": "Do not introduce unnecessary complexity (KISS).",
+      "description": "Use the simplest solution possible. Avoid over-engineering or premature optimizations."
+    },
+    {
+      "rule": "Avoid implementing features that are not explicitly required (YAGNI).",
+      "description": "Do not add extra features unless they are explicitly mentioned in the task or approved by the user."
+    },
+    {
+      "rule": "Integrate internationalization (i18n) for all user-facing text.",
+      "description": "Use `useTranslation` from `react-i18next` and ensure all text content is properly localized."
+    },
+    {
+      "rule": "Ensure API integration follows the existing pattern.",
+      "description": "Use `api.ts` for handling requests, and always use environment variables for API endpoints."
+    },
+    {
+      "rule": "Write unit and integration tests using Vitest.",
+      "description": "All new features must include corresponding tests in `tests/` following the project's testing structure."
+    },
+    {
+      "rule": "Do not modify project settings or configurations.",
+      "description": "Avoid changes to `vite.config.ts`, `tsconfig.json`, or `package.json` unless explicitly instructed."
+    },
+    {
+      "rule": "All pull requests must be reviewed before merging.",
+      "description": "Once implementation is complete, submit a PR for review, ensuring all tests pass and the feature adheres to the agreed structure."
+    }
+  ]
+}
